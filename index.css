@@ -12,12 +12,14 @@ body {
 
 section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 2rem;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  padding: 0 1rem;
 }
 
 section div {
@@ -29,17 +31,18 @@ section:nth-child(2n-1) {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 150%;
-  margin-top: 2rem;
+  margin-top: 1.125rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 3rem;
+  text-align: center;
   z-index: 1;
 }
 
@@ -47,12 +50,12 @@ h1,
 h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  letter-spacing: .75rem;
+  letter-spacing: .375rem;
 }
 
 img:not(.cover-img) {
-  width: 40rem;
-  height: 40rem;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
   object-position: top;
   border-radius: 4rem;
@@ -61,7 +64,7 @@ img:not(.cover-img) {
 
 .cover-img {
   position: absolute;
-  top: -2rem;
+  top: -10rem;
 }
 
 footer {
@@ -69,4 +72,90 @@ footer {
   color: #e5e5e5;
   padding: 1rem 0;
   text-align: center;
+}
+
+@media (min-width: 390px) {
+  section {
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 541px) {
+  p {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h1,
+  h2 {
+    letter-spacing: .5rem;
+  }
+
+  img:not(.cover-img) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .cover-img {
+    top: -2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  section {
+    flex-direction: row;
+  }
+
+  .cover-img {
+    top: -10rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+
+  img:not(.cover-img) {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .cover-img {
+    top: -2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  section {
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  section {
+    gap: 8rem;
+  }
 }
